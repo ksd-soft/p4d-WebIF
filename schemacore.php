@@ -1,5 +1,7 @@
 <?php
 
+$aligned = "left";
+
   // -------------------------
   // get last time stamp
 
@@ -15,7 +17,7 @@ $from = time() - ($schemaRange * 60 *60);                        // der Charts b
 // -------------------------
 // check for valuesBG
 
-   if (isset($_SESSION["valuesBG"]))        // Hintergrund-Box bei Schema-Werten
+   if (isset($_SESSION["valuesBG"]))                             // Hintergrund-Box bei Schema-Werten
       $valuesBG = " background-color:#ccc; border-radius:2px; box-shadow:2px,2px,2px,#666;";
 
 // -------------------------
@@ -33,7 +35,7 @@ $pumpON  = (!preg_match("/img/", $_SESSION['pumpON']))  ? ($_SESSION['pumpON']  
 $pumpOFF = (!preg_match("/img/", $_SESSION['pumpOFF'])) ? ($_SESSION['pumpOFF'] != "") ? $_SESSION['pumpOFF'] : "off" : "<img src=\"" . $_SESSION['pumpOFF'] . "\">";
 $ventON  = (!preg_match("/img/", $_SESSION['ventON']))  ? ($_SESSION['ventON']  != "") ? $_SESSION['ventON']  : "on"  : "<img src=\"" . $_SESSION['ventON'] . "\">";
 $ventOFF = (!preg_match("/img/", $_SESSION['ventOFF'])) ? ($_SESSION['ventOFF'] != "") ? $_SESSION['ventOFF'] : "off" : "<img src=\"" . $_SESSION['ventOFF'] . "\">";
-$pumpsVA = "|," . $_SESSION['pumpsVA'] . ",";   // Workaround damit die IDs erkannt werden...
+$pumpsVA = "|," . $_SESSION['pumpsVA'] . ",";                    // Workaround damit die IDs erkannt werden...
 $pumpsDO = "|," . $_SESSION['pumpsDO'] . ",";
 $pumpsAO = "|," . $_SESSION['pumpsAO'] . ",";     
 
@@ -68,7 +70,7 @@ while ($rowConf = mysql_fetch_assoc($resultConf))
       $pmpDir = (isset($pmpDummy[0])) ? $pmpDummy[0] : "";          // aus eigener Sensor-Bezeichnung holen
       setTxt();
 
-   if (!isset($imgSize))                                                 // Chart nur bei SCHEMA, nicht bei CONFIG anzeigen
+   if (!isset($imgSize))                                            // Chart nur bei SCHEMA, nicht bei CONFIG anzeigen
    { 
      $url = "<a class=\"a\" href=\"#\" onclick=\"window.open('detail.php?width=1200&height=600&address=$addr&type=$type&from=" . $from . "&range=" . ($schemaRange / 24) . "&chartXLines=" . $_SESSION['chartXLines'] . "&chartDiv=" . $_SESSION['chartDiv'] . " ','_blank'," 
         . "'scrollbars=yes,width=1200,height=600,resizable=yes,left=120,top=120')\">";
@@ -79,16 +81,16 @@ while ($rowConf = mysql_fetch_assoc($resultConf))
            
       if (!preg_match("/img/", $value)) 
         echo "        <div class=\"values\" title=\"" . $title . "\" style=\"$valuesBG position:absolute; top:" . ($top + $jpegTop) . "px; $aligned:" . ($left + $jpegLeft) . "px" . "; color:" . $color . "; z-index:11" . "\">";
-      else                               // Bilder ohne Stylesheet-Klasse anzeigen 
+      else                                                          // Bilder ohne Stylesheet-Klasse anzeigen 
       {
         echo "        <div title=\"" . $title . ": " . $row['s_value'] . $unit . "\" style=\" position:absolute; top:" . ($top + $jpegTop) . "px; $aligned:" . ($left + $jpegLeft) . "px" . "; z-index:11" . "\">";
-        $bez = "";                       // keine Bezeichnung bei Bildern anzeigen
+        $bez = "";                                                  // keine Bezeichnung bei Bildern anzeigen
       }
       
       $value = (preg_match("/[a-zA-Z ]/", $value)) ? $value : number_format(round($value, 1),1);   // Nachkommastelle immer anzeigen
       if ($showText)
          echo $url . $text . $url2;
-      else if ($showUnit && !preg_match("/[a-zA-Z]/", $value)) // Unit nur anzeigen, wenn Wert eine Zahl ist
+      else if ($showUnit && !preg_match("/[a-zA-Z]/", $value))      // Unit nur anzeigen, wenn Wert eine Zahl ist
          echo $url . $bez . $value . ($unit == "°" ? "°C" : $unit) . $url2;
       else
          echo $url . $bez . $value . $url2;
@@ -132,6 +134,7 @@ function setTxt ()
     (strpos($pumpsDO, ",$addr,") != false) ? ($value == 0) ? $value = preg_replace("/\./",$pmpDir.".",$pumpOFF) : $value = (!preg_match("/img/", $pumpON)) ? $value : $pumpON : $addr;     //Pumpen
     (strpos($pumpsDO, ",($addr),") != false) ? ($value == 0) ? $value = $ventOFF : $value = (!preg_match("/img/", $ventON)) ? $value : $ventON : $addr;                                    //Lüfter
     ($addr == "8") ? ($value == "1") ? $value = "Holzbetrieb" : $value = "Gasbetrieb" : $value;
+    // wenn Sensor-Adresse in der Pumpenliste enthalten ist, dann (bei Value=0 --> $pumpOFF), wenn kein Bild --> Wert anzeigen, sonst Bild
     ($addr == "xxx") ? $bez = "eigeneBez: " : $bez;
   }
   

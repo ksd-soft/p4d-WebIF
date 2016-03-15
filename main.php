@@ -1,5 +1,4 @@
 <?php
-
 //***************************************************************************
 // WEB Interface of p4d / Linux - Heizungs Manager
 // This code is distributed under the terms and conditions of the

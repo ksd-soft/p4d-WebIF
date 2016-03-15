@@ -10,7 +10,6 @@ include("functions.php");
 
 $fontText = $chart_fontpath . "/Forgotte.ttf";
 $fontScale = $chart_fontpath . "/Forgotte.ttf";
-// date_default_timezone_set('Europe/Berlin');
 
 // -----------------------------
 // db connection
@@ -21,7 +20,6 @@ mysql_query("set names 'utf8'");
 mysql_query("SET lc_time_names = 'de_DE'");
 
 // parameters
-// echo $Div.":".$_GET['chartDiv']." - ".$XLines.":".$_GET['chartXLines'];
 
 if(isset($_GET['chartDiv']) && is_numeric($_GET['chartDiv']))
    $Div = htmlspecialchars($_GET['chartDiv']);

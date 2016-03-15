@@ -9,8 +9,6 @@ $result = mysql_query("select max(time), DATE_FORMAT(max(time),'%d. %b. %Y - %H:
 $row = mysql_fetch_assoc($result);
 $max = $row['max(time)'];
 $maxPretty = $row['maxPretty'];
-//$schemaRange = $_SESSION['schemaRange'] or $schemaRange = 60;    // Bereich und Anfang
-//$from = time() - ($schemaRange * 60 *60);                        // der Charts beim Klick auf Werte im Schema
 
 
 // -------------------------
@@ -65,7 +63,7 @@ while ($rowConf = mysql_fetch_assoc($resultConf))
       $pmpDir = (isset($pmpDummy[0])) ? $pmpDummy[0] : "";          // aus eigener Sensor-Bezeichnung holen
       setTxt();
 
-	   if (!isset($imgSize) && ($link))                                             // Chart nur bei SCHEMA, nicht bei CONFIG anzeigen
+	   if (!isset($imgSize) && ($link))                               // Chart nur bei SCHEMA, nicht bei CONFIG anzeigen
 	   { 
 	     $url = "        <a class=\"a\" href=\"$link\">";
 	     $url2 ="</a>";
@@ -128,6 +126,7 @@ function setTxt ()
     (strpos($pumpsDO, ",$addr,") != false) ? ($value == 0) ? $value = preg_replace("/\./",$pmpDir.".",$pumpOFF) : $value = (!preg_match("/img/", $pumpON)) ? $value : $pumpON : $addr;     //Pumpen
     (strpos($pumpsDO, ",($addr),") != false) ? ($value == 0) ? $value = $ventOFF : $value = (!preg_match("/img/", $ventON)) ? $value : $ventON : $addr;                                    //Lüfter
     ($addr == "8") ? ($value == "1") ? $value = "Holzbetrieb" : $value = "Gasbetrieb" : $value;
+    // wenn Sensor-Adresse in der Pumpenliste enthalten ist, dann (bei Value=0 --> $pumpOFF), wenn kein Bild --> Wert anzeigen, sonst Bild
     ($addr == "xxx") ? $bez = "eigeneBez: " : $bez;
   }
   

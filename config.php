@@ -21,7 +21,6 @@ $wd_disp         = array("Montag", "Dienstag", "Mittwoch",  "Donnerstag", "Freit
 // ------------------------------
 // visual configs  
 
-$aligned         = "left";                     // Werte rechtsbündig/linksbündig ausrichten (not good working yet)
 $pumpDir         = "-right|-left|-up|-down";
 
 // -----------------------------

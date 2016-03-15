@@ -13,8 +13,9 @@ function confirmSubmit(msg)
    return false;
 } 
 
-function showContent(elm){
-		if (document.getElementById(elm).style.display == "block") {document.getElementById(elm).style.display = "none"} else {document.getElementById(elm).style.display = "block"}
+function showContent(elm)
+{
+	if (document.getElementById(elm).style.display == "block") {document.getElementById(elm).style.display = "none"} else {document.getElementById(elm).style.display = "block"}
 }
 
 function readonlyContent(elm, chk)
@@ -49,19 +50,11 @@ function disableContent(elm, chk)
    
 function displayCoords(elmX,elmY,e)
 {
-if (document.getElementById(elmX) != null)
-{
-	document.getElementById(elmX).value = e.offsetX;
-  document.getElementById(elmY).value = e.offsetY;
-}
-/*	if(!e) e = window.event;
-	var body = (window.document.compatMode && window.document.compatMode == "CSS1Compat") ? window.document.documentElement : window.document.body;
-	xpos = e.pageX ? e.pageX : e.clientX + body.scrollLeft  - body.clientLeft
-	ypos = e.pageY ? e.pageY : e.clientY + body.scrollTop - body.clientTop,
-  txt = "Xpos="+(xpos-8)+"; Ypos="+(ypos-285)+"  ";
-  document.getElementById(elmX).value = xpos;
-  document.getElementById(elmY).value = ypos;
-*/
+	if (document.getElementById(elmX) != null)
+	{
+		document.getElementById(elmX).value = e.offsetX;
+	  document.getElementById(elmY).value = e.offsetY;
+	}
 }
 
 function colorSelect(elm) {
@@ -74,16 +67,16 @@ function colorSelect(elm) {
 
 function getEventOffsetXY(evt)
 {
-    if (evt.offsetX != null)
-        return [evt.offsetX, evt.offsetY];
-       
-    var  top = 0, left = 0, o = evt.target || evt.srcElement;
-    while (o.offsetParent)
-     {
-         left += o.offsetLeft ;
-         top += o.offsetTop ;
-         o = o.offsetParent ;
-    };
-    return [(evt.clientX - left), (evt.clientY - top)];
+  if (evt.offsetX != null)
+      return [evt.offsetX, evt.offsetY];
+     
+  var  top = 0, left = 0, o = evt.target || evt.srcElement;
+  while (o.offsetParent)
+   {
+       left += o.offsetLeft ;
+       top += o.offsetTop ;
+       o = o.offsetParent ;
+  };
+  return [(evt.clientX - left), (evt.clientY - top)];
 };
  

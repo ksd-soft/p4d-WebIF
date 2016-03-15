@@ -1,4 +1,10 @@
 <?php
+//***************************************************************************
+// WEB Interface of p4d / Linux - Heizungs Manager
+// This code is distributed under the terms and conditions of the
+// GNU GENERAL PUBLIC LICENSE. See the file LICENSE for details.
+// Date 04.11.2010 - 07.03.2016  Jörg Wendel, Stefan Döring
+//***************************************************************************
 
 session_start();
 
@@ -147,7 +153,7 @@ function printHeader($refresh = 0, $smart = 0)
       echo "    <meta http-equiv=\"refresh\" content=\"$refresh\">\n";
    
    echo "    <meta name=\"author\" content=\"Jörg Wendel, Stefan Döring\">
-    <meta name=\"copyright\" content=\"Jörg Wendel\">
+    <meta name=\"copyright\" content=\"Jörg Wendel, Stefan Döring\">
     <LINK REL=\"SHORTCUT ICON\" HREF=\"" . $_SESSION['heatingType'] . ".ico\">
     <link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"$stylesheet\">
@@ -179,10 +185,8 @@ function printHeader($refresh = 0, $smart = 0)
   {
    $link = ($_SERVER['SCRIPT_NAME'] == "/smartmain.php") ? "smart.php" : "smartmain.php";
    $title = ($_SERVER['SCRIPT_NAME'] == "/smartmain.php") ? "zum&nbsp;Schema" : "zur&nbsp;Tabelle";
-   // <a class=\"smartButton1\" style=\"position:absolute; left:1px; top:-1px; z-index:8;\" href=\"main.php\">Home</a>
    echo "    <a class=\"smartButton1\" style=\"position:absolute; left:1px; top:-1px; z-index:8;\" href=\"$link\">$title</a>\n";
   }  
-//   echo $stylesheet;
    echo "    <div class=\"$dClass\">\n";
 }
 

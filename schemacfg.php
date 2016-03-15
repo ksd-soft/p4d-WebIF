@@ -139,7 +139,7 @@ echo "      </div>\n";
 
 // -------------------------
 // show buttons
-if ($started == 1 && $_SESSION["cur"] != $_SESSION["num"] - 1) // Fix für letzten Wert... echo $started . $_SESSION['cur'] . $_SESSION['num'];
+if ($started == 1 && $_SESSION["cur"] != $_SESSION["num"] - 1) // Fix für letzten Wert... 
 {
    echo "      <button class=\"button3\" type=submit name=cfg value=Stop>Stop</button>\n";
    echo "      <button class=\"button3\" type=submit name=cfg value=Skip>Skip</button>\n";
