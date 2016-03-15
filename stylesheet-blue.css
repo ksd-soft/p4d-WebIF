@@ -1,0 +1,672 @@
+
+@font-face {
+  font-family: Nunito, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v7/TttUCfJ272GBgSKaOaD7KltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body 
+{
+  font-family:  Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  position: absolute;
+  background-color: #EEEEEE; 
+  font-size: 12px;
+  color: #111111;
+  margin: 0px;
+}
+
+p
+{
+	margin: 0;
+	padding: 0;
+}
+
+.smartBody 
+{
+  background-color: #000; 
+  font-size: 18px;
+  color: #aaa;
+}
+
+.content 
+{
+  padding: 20px;
+  background-color: #EEEEEE; 
+  font-size: 18px;
+  color: #111111;
+}
+
+.smartContent 
+{
+  background-color: #000; 
+  font-size: 18px;
+  color: #111111;
+}
+
+.smartButton1
+{
+  background-color: #1100EE;
+  color: white;
+  margin: 2px;
+  padding: 2px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  font: bold 20px sans-serif;
+  box-shadow: 2px 2px 2px #666;
+}
+
+
+.smartInfo 
+{
+  background-color: #AAEEFF;
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.smartInfoWarn
+{
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.smartInfoError
+{
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.smartStateImgContainer
+{ 
+  position: absolute; 
+  left: 330px; 
+  width: 155px; 
+  height: 180px; 
+  background-color: #AAEEFF;
+  padding: 5px; 
+  border-radius: 8px; 
+  box-shadow: 2px 2px 2px #666;
+}
+
+.smartTable
+{
+  width: 490px;
+  border: 1px;
+  background-color: #FFFFCC;
+  color: black;
+  font-size: 14px;
+  padding: 20px 20px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.smartTableTitle
+{
+  width: 490px;;
+  border: 1px;
+  background-color: blue;
+  color: white;
+  font: bold 20px sans-serif;
+  padding: 20px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.smartTableHead 
+{
+  width: 490px;;
+  border: 1px;
+  background-color: #0066FF;
+  color: white;
+  font: bold 20px sans-serif;
+  padding: 20px;
+}
+
+.smartTableHead1
+{
+  width: 490px;
+  border: 1px;
+  background-color: #0066FF;
+  color: white;
+  font: bold 16px sans-serif;
+  padding: 20px;
+}
+
+.smartTableLight
+{
+  width: 490px;;
+  border: 1px;
+  background-color: #AAEEFF;
+  color: black;
+  font-size: 18px;
+  padding: 20px 20px;
+}
+
+.smartTableDark
+{
+  width: 490px;;
+  border: 1px;
+  background-color: #77FFFF;
+  color: black;
+  font-size: 18px;
+  padding: 20px 20px;
+}
+
+.button1
+{
+  background-color: #1100EE;
+  color: white;
+  margin: 4px;
+  padding: 4px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font: bold 20px sans-serif;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.button1:hover 
+{
+  background: #000077;
+}
+
+.button2
+{
+  background-color: #0066FF;
+  color: white;
+  margin: 2px;
+  padding: 5px 17px;
+  text-decoration: none;
+  font: bold 20px sans-serif;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.button2:hover 
+{
+  background: #1100EE;
+  border-radius: 10px;
+}
+
+.button2sel
+{
+  background-color: #FF9900;
+  color: blue;
+  margin: 2px;
+  padding: 5px 17px;
+  text-decoration: none;
+  font: bold 20px sans-serif;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.button2sel:hover 
+{
+  background: #FF3300;
+  border-radius: 10px;
+}
+
+.button3 
+{
+  background-color: #00DDEE;
+  color: black;
+  padding: 5px 17px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #666;
+}
+
+.button3:hover 
+{
+  background: #00EE88;
+}
+
+.button4 
+{
+  background-color: white;
+  color: green;
+  padding: 2px 3px;
+  text-decoration: none;
+  font: bold 10px sans-serif;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.button4:hover 
+{
+  background: lime;
+}
+
+.buttont 
+{
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  border: 0;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.buttont:hover 
+{
+  background-color: #0066FF;
+  color: white;
+  border: 0;
+}
+
+.seperatorTitle1
+{
+  background-color: blue;
+  color: white;
+  width: inherit;
+  padding: 2px 15px;
+  text-decoration: none;
+  font: bold 18px sans-serif;
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px #666;
+}
+
+.seperatorTitle2
+{
+  background-color: #0066FF;
+  color: white;
+  width: inherit;
+  padding: 2px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px #666;
+}
+
+.input
+{
+  background-color: #AAEEFF;
+  color: black;
+  width: inherit;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #666;
+}
+
+.inputSettings
+{
+  background-color: #eee;
+  color: black;
+  width: 180px;
+  padding: 2px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.inputComment
+{
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.inputEdit
+{
+  text-decoration: none;
+  color: blue;
+  font-size: 16px;
+  width: 60px;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px #666;
+}
+
+.inputEdit2
+{
+  text-decoration: none;
+  color: blue;
+  font-size: 14px;
+  width: 70px;
+  padding: 0px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.checkbox
+{
+  background-color: #00DDEE;
+  color: black;
+  padding: 3px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px #666;
+}
+
+.info 
+{
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 960px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.help 
+{
+  color: yellow;
+  cursor: pointer;
+}
+
+.infoWarn
+{
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 960px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.infoError
+{
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 960px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.schema 
+{
+  font: bold 12px sans-serif;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.values
+{
+  color: black;
+  padding: 1px 3px;
+  text-decoration: none;
+  font: bold 16px sans-serif;
+  background: #ccc; 
+  border-radius: 2px;
+}
+
+.values a:link
+{
+  color: black;
+  padding: 1px 1px;
+  text-decoration: none;
+  font: bold 16px sans-serif;
+}  
+
+.values a:visited
+{
+  color: black;
+  padding: 1px 1px;
+  text-decoration: none;
+  font: bold 16px sans-serif;
+}  
+.nolink
+{
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+.table
+{
+  width: 960px;
+  border: 1px;
+  background-color: #FFFFCC;
+  color: black;
+  font-size: 14px;
+  padding: 20px 20px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.tableTitle
+{
+  width: 960px;;
+  border: 1px;
+  background-color: blue;
+  color: white;
+  font: bold 20px sans-serif;
+  padding: 20px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.tableHead 
+{
+  width: 960px;;
+  border: 1px;
+  background-color: #0066FF;
+  color: white;
+  font: bold 20px sans-serif;
+  padding: 20px;
+}
+
+.tableHead1
+{
+  width: 960px;
+  border: 1px;
+  background-color: #0066FF;
+  color: white;
+  font: bold 16px sans-serif;
+  padding: 20px;
+}
+
+.tableLight
+{
+  width: 960px;;
+  border: 1px;
+  background-color: #AAEEFF;
+  color: black;
+  font-size: 18px;
+  padding: 20px 20px;
+}
+
+.tableDark
+{
+  width: 960px;;
+  border: 1px;
+  background-color: #77FFFF;
+  color: black;
+  font-size: 18px;
+  padding: 20px 20px;
+}
+
+.cellL0
+{
+  background-color: #FFFFCC;
+  color: black;  
+}
+
+.cellL1
+{ 
+  background-color: #0066FF;
+  color: black;
+}
+
+.cellL2
+{ 
+  background-color: #00DDEE;
+  color: black;
+}
+
+.cellL3
+{ 
+  background-color: #FFAA66;
+  color: black;
+}
+
+.cellL4
+{ 
+  background-color: white;
+  color: black;
+}
+
+.schemaImage
+{ 
+  background-color: #AAEEFF;
+  font-size: 20px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.smartImage
+{ 
+  background-color: #000;
+  font-size: 20px;
+}
+
+.stateInfo
+{ 
+  position: absolute; 
+  top: 50px; 
+  left: 20px; 
+  width: 370px; 
+  background-color: #AAEEFF;
+  padding: 10px; 
+  font-size: 20px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.centerImage
+{
+  position: absolute;
+  top: 0; 
+  bottom:0; 
+  left: 0; 
+  right:0;
+  margin: auto;
+}
+
+.stateImgContainer
+{ 
+  position: absolute; 
+  left: 420px;
+  top: 50px; 
+  width: 145px; 
+  height: 195px; 
+  background-color: #AAEEFF;
+  padding: 10px; 
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.P4dInfo
+{ 
+  position: absolute; 
+  top: 50px; 
+  left: 595px; 
+  width: 365px; 
+  height: 195px; 
+  background-color: #AAEEFF;
+  padding: 10px; 
+  font-size: 18px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+#aStateOk
+{ 
+  color: green;
+  font: bold 24px sans-serif;
+}
+
+#aStateFail
+{ 
+  color: red;
+  text-decoration: blink;
+  font: bold 24px sans-serif;
+}
+
+#aStateHeating
+{ 
+  color: red;
+  font: bold 30px sans-serif;
+}
+
+#aStateOther
+{ 
+  color: blue;
+  font: bold 30px sans-serif;
+}
+
+#aSelect 
+{
+  position: absolute; 
+  top: 195px; 
+  left: 20px; 
+  width: 370px; 
+  background-color: #AAEEFF;
+  solid: #804000; 
+  padding: 10px; 
+  font-size: 16px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+#aSelectChart 
+{ 
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 500px;
+  background-color: #AAEEFF;
+  padding: 10px;
+  font-size: 16px;
+  border-radius:10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.chart
+{ 
+  background-color: #AAEEFF;
+  padding: 8px;
+  width: 910px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.red {background:red; color:white;}
+.green {background:green; color:white;}
+.blue {background:blue; color:white;}
+.maroon {background:maroon; color:white;}
+.black {background:black; color:white;}
+.purple {background:purple; color:white;}
+.olive {background:olive; color:white;}
+.navy {background:navy; color:white;}
+.orange {background:orange; color:white;}
+.teal {background:teal; color:white;}
+.yellow {background:yellow; color:black;}
+.white {background:white; color:black;}
+.aqua {background:aqua; color:black;}
+.lime {background:lime; color:black;}
+.silver{background:silver; color:black;}
+
