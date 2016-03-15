@@ -1,4 +1,4 @@
-include/pChart2.1.4
-include/SQL
+/pChart2.1.4/**
+/SQL/**
 pChart
 err.php
