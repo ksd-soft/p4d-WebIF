@@ -65,9 +65,11 @@ p
   background-color: #AAEEFF;
   color: black;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.1em;
   width: 300px;
-  padding: 8px;
+  padding: 0.4em;
+  margin: 3px;
+  box-sizing: content-box;
   border-radius: 5px;
   box-shadow: 2px 2px 2px #666;
 }

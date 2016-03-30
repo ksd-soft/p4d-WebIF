@@ -63,6 +63,7 @@ printHeader(60,1);
   $time = "";
 
   $state = requestAction("s3200-state", 3, 0, "", $response);
+  $heatingType = $_SESSION['heatingType'];
 
   if ($state == 0)
      list($time, $state, $status, $mode) = split("#", $response, 4); 
@@ -92,7 +93,6 @@ printHeader(60,1);
 
   echo "      <div class=\"smartStateImgContainer\">\n";
 
-  $heatingType = $_SESSION['heatingType'];
 
   if ($state == 0 || $p4dstate != 0)
      $stateImg = "img/state/state-error.gif";
