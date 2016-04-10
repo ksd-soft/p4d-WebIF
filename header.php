@@ -136,7 +136,7 @@ include("functions.php");
 function printHeader($refresh = 0, $smart = 0)
 {
   global $body_width; 		
-  if ($smart <> 1)  { $bClass = "style=\"width:" . $body_width . "px;\""; $dClass = "content"; } else { $bClass = "class=\"smartBody\""; $dClass = "smartContent"; }
+  if ($smart <> 1)  { $bClass = " style=\"width:" . ($body_width + 20) . "px;\""; $dClass = "content"; } else { $bClass = "class=\"smartBody\" style=\"width:" . ($_SESSION['viewport']) . "px;\""; $dClass = "smartContent"; } //
    // ----------------
    // HTML Head
    

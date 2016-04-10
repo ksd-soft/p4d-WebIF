@@ -161,7 +161,7 @@ function seperator($title, $top = 0, $level = 1, $width = 0, $center = 1)
    $top = ($top <> 0) ?  "position:absolute; top:".$top."px;" : "";
    $width = ($width <> 0) ?  " width:".$width."px;" : "";
    
-   echo "        <div class=\"$class\"" . $style . $top . $width . (($style) ? "\"" : "") . ">\n";
+   echo "        <div class=\"$class\" " . $style . $top . $width . (($style) ? "\"" : "") . ">\n";
    echo "          " . (($center) ? "<center>$title</center>\n" : "$title\n");
    echo "        </div><br/>\n";
 }

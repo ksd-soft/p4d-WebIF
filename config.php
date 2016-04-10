@@ -8,7 +8,7 @@ $mysqluser       = "p4";
 $mysqlpass       = "p4";
 $mysqldb         = "p4";
 
-$body_width       = "960";
+$body_width      = "960";
 $cache_dir       = "pChart/cache";
 $chart_fontpath  = "pChart/fonts";
 $schema_path     = "img/schema/";

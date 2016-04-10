@@ -70,7 +70,8 @@ printHeader(60,1);
 
   $time = str_replace($wd_value, $wd_disp, $time);   
 
-  echo "      <div class=\"smartInfo\" style=\"position:absolute; left:1px; top:31px; z-index:8;\">\n";
+  echo "    <div class=\"smartInfoContent\">";
+  echo "      <div class=\"smartInfo\" style=\"z-index:8;\">\n";
 
   if ($state == 19)
      echo  "        <div id=\"aStateOk\"><center>$status</center></div>\n";
@@ -123,8 +124,9 @@ printHeader(60,1);
   else
      $stateImg = "img/type/heating-$heatingType.png";
 
-  echo "        <img class=\"centerImage\" src=\"$stateImg\">\n";
+  echo "        <center><img class=\"centerImage\" src=\"$stateImg\"></center>\n";
   echo "      </div>\n";
+  echo "    </div>\n";
 
   echo "      <br/>\n";
 
@@ -134,13 +136,13 @@ printHeader(60,1);
 
   $from = date_create_from_format('!Y-m-d', $year.'-'.$month.'-'.$day)->getTimestamp();
 
-  seperator("Messwerte vom " . $maxPretty, 200, 1, 465);
+  seperator("Messwerte vom " . $maxPretty, 0, 1, 470, 0);
 
   // ------------------
   // table
 
   echo "  <div>\n";
-  echo "  <table class=\"smartTable\" cellspacing=0 rules=rows style=\"position:absolute; top:240px;\">\n";
+  echo "  <table class=\"smartTable\" cellspacing=0 rules=rows style=\"width: " . $_SESSION['viewport'] . "px;\">\n";
   echo "      <tr class=\"smartTableHead1\">\n";
 
 
@@ -194,7 +196,7 @@ printHeader(60,1);
      echo "     </tr>\n";
   }
 
-  echo "  </table>\n<br/><br/>\n";
+  echo "  </table>\n";
   echo "  </div>\n";
 
   mysql_close();

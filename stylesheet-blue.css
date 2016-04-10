@@ -12,17 +12,10 @@ body
   font-family:  Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
-  position: absolute;
   background-color: #EEEEEE; 
   font-size: 12px;
   color: #111111;
   margin: 0px;
-}
-
-p
-{
-	margin: 0;
-	padding: 0;
 }
 
 .smartBody 
@@ -34,19 +27,187 @@ p
 
 .content 
 {
-  padding: 20px;
+  position:relative;
+  top: 20px;
+  padding: 10px;
   background-color: #EEEEEE; 
   font-size: 18px;
   color: #111111;
 }
 
+.InfoContent 
+{
+  position: relative;
+  top: 2px;
+  height: 215px;
+}
+
+.info 
+{
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 960px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.help 
+{
+  color: yellow;
+  cursor: pointer;
+}
+
+.infoWarn
+{
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 960px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.infoError
+{
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 960px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #666;
+}
+
+.stateInfo
+{ 
+  position: relative; 
+  top: 0px; 
+  left: 0px; 
+  width: 370px; 
+  float: left;
+  background-color: #AAEEFF;
+  padding: 10px; 
+  font-size: 20px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.centerImage
+{
+  position: relative;
+  margin: auto;
+}
+
+.stateImgContainer
+{ 
+  position: relative;
+  top: 0px; 
+  left: 10px;
+  width: 145px; 
+  height: 195px;
+  float: left; 
+  background-color: #AAEEFF;
+  padding: 10px 10px;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.P4dInfo
+{ 
+  position: relative; 
+  top: 0px; 
+  right: 0px; 
+  width: 365px; 
+  height: 195px; 
+  float: right;
+  background-color: #AAEEFF;
+  padding: 10px; 
+  margin: 0px; 
+  font-size: 18px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+
 .smartContent 
 {
+  position: relative;
+  top: 0px;
+  padding: 0px; 
   background-color: #000; 
   font-size: 18px;
   color: #111111;
 }
 
+.smartInfoContent 
+{
+  position: relative; 
+  top: 2px;
+  height: 170px;
+}
+
+.smartInfo 
+{
+  position: absolute; 
+  color: black;
+  float:left;
+  left: 0px;
+  bottom: 0px;
+  text-decoration: none;
+  font-size: 1.1em;
+  width: 62%;
+  padding: 0.4em;
+  background-color: #AAEEFF;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #666;
+}
+
+.smartInfoWarn
+{
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #666;
+}
+
+.smartInfoError
+{
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px #666;
+}
+
+.smartStateImgContainer
+{ 
+  position: relative;
+  top: 0px; 
+  right: 0px; 
+  width: 155px; 
+  height: 160px;
+  float: right; 
+  background-color: #AAEEFF;
+  padding: 5px; 
+  border-radius: 8px; 
+  box-shadow: 0px 5px 5px #666;
+}
+  
 .smartButton1
 {
   background-color: #1100EE;
@@ -59,82 +220,27 @@ p
   box-shadow: 2px 2px 2px #666;
 }
 
-
-.smartInfo 
-{
-  background-color: #AAEEFF;
-  color: black;
-  text-decoration: none;
-  font-size: 1.1em;
-  width: 300px;
-  padding: 0.4em;
-  margin: 3px;
-  box-sizing: content-box;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #666;
-}
-
-.smartInfoWarn
-{
-  background-color: orange;
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  width: 300px;
-  padding: 8px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #666;
-}
-
-.smartInfoError
-{
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  width: 300px;
-  padding: 8px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #666;
-}
-
-.smartStateImgContainer
-{ 
-  position: absolute; 
-  left: 330px; 
-  width: 155px; 
-  height: 180px; 
-  background-color: #AAEEFF;
-  padding: 5px; 
-  border-radius: 8px; 
-  box-shadow: 2px 2px 2px #666;
-}
-
 .smartTable
 {
-  width: 490px;
   border: 1px;
   background-color: #FFFFCC;
   color: black;
   font-size: 14px;
   padding: 20px 20px;
-  box-shadow: 8px 8px 8px #666;
+  box-shadow: 0px 8px 8px #666;
 }
 
 .smartTableTitle
 {
-  width: 490px;;
   border: 1px;
   background-color: blue;
   color: white;
   font: bold 20px sans-serif;
   padding: 20px;
-  box-shadow: 8px 8px 8px #666;
 }
 
 .smartTableHead 
 {
-  width: 490px;;
   border: 1px;
   background-color: #0066FF;
   color: white;
@@ -144,7 +250,6 @@ p
 
 .smartTableHead1
 {
-  width: 490px;
   border: 1px;
   background-color: #0066FF;
   color: white;
@@ -154,7 +259,6 @@ p
 
 .smartTableLight
 {
-  width: 490px;;
   border: 1px;
   background-color: #AAEEFF;
   color: black;
@@ -164,7 +268,6 @@ p
 
 .smartTableDark
 {
-  width: 490px;;
   border: 1px;
   background-color: #77FFFF;
   color: black;
@@ -283,7 +386,7 @@ p
   text-decoration: none;
   font: bold 18px sans-serif;
   border-radius: 10px;
-  box-shadow: 6px 6px 6px #666;
+  box-shadow: 0px 6px 6px #666;
 }
 
 .seperatorTitle2
@@ -295,7 +398,7 @@ p
   text-decoration: none;
   font-size: 18px;
   border-radius: 10px;
-  box-shadow: 6px 6px 6px #666;
+  box-shadow: 0px 6px 6px #666;
 }
 
 .input
@@ -358,46 +461,57 @@ p
   border-radius: 8px;
   box-shadow: 4px 4px 4px #666;
 }
+#aStateOk
+{ 
+  color: green;
+  font: bold 24px sans-serif;
+}
 
-.info 
+#aStateFail
+{ 
+  color: red;
+  text-decoration: blink;
+  font: bold 24px sans-serif;
+}
+
+#aStateHeating
+{ 
+  color: red;
+  font: bold 30px sans-serif;
+}
+
+#aStateOther
+{ 
+  color: blue;
+  font: bold 30px sans-serif;
+}
+
+#aSelect 
 {
-  background-color: green;
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  width: 960px;
-  padding: 15px;
-  border-radius: 10px;
+  position: relative; 
+  bottom: 60px; 
+  left: 0px; 
+  width: 370px; 
+  height: 40px;
+  float: left; 
+  background-color: #AAEEFF;
+  solid: #804000; 
+  padding: 10px; 
+  font-size: 16px;
+  border-radius: 10px; 
   box-shadow: 8px 8px 8px #666;
 }
 
-.help 
-{
-  color: yellow;
-  cursor: pointer;
-}
-
-.infoWarn
-{
-  background-color: orange;
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  width: 960px;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 8px #666;
-}
-
-.infoError
-{
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  width: 960px;
-  padding: 15px;
-  border-radius: 10px;
+#aSelectChart 
+{ 
+//  position: absolute;
+  top: 50px;
+  left: 30px;
+  width: 500px;
+  background-color: #AAEEFF;
+  padding: 10px;
+  font-size: 16px;
+  border-radius:10px;
   box-shadow: 8px 8px 8px #666;
 }
 
@@ -441,7 +555,6 @@ p
 
 .table
 {
-  width: 960px;
   border: 1px;
   background-color: #FFFFCC;
   color: black;
@@ -452,7 +565,6 @@ p
 
 .tableTitle
 {
-  width: 960px;;
   border: 1px;
   background-color: blue;
   color: white;
@@ -463,7 +575,6 @@ p
 
 .tableHead 
 {
-  width: 960px;;
   border: 1px;
   background-color: #0066FF;
   color: white;
@@ -473,7 +584,6 @@ p
 
 .tableHead1
 {
-  width: 960px;
   border: 1px;
   background-color: #0066FF;
   color: white;
@@ -483,7 +593,6 @@ p
 
 .tableLight
 {
-  width: 960px;;
   border: 1px;
   background-color: #AAEEFF;
   color: black;
@@ -493,12 +602,55 @@ p
 
 .tableDark
 {
-  width: 960px;;
   border: 1px;
   background-color: #77FFFF;
   color: black;
   font-size: 18px;
   padding: 20px 20px;
+}
+.schemaImage
+{ 
+  background-color: #AAEEFF;
+  font-size: 20px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.smartImage
+{ 
+  background-color: #000;
+  font-size: 20px;
+}
+
+.chart
+{ 
+  background-color: #AAEEFF;
+  padding: 8px;
+  width: 910px;
+  border-radius: 10px; 
+  box-shadow: 8px 8px 8px #666;
+}
+
+.red {background:red; color:white;}
+.green {background:green; color:white;}
+.blue {background:blue; color:white;}
+.maroon {background:maroon; color:white;}
+.black {background:black; color:white;}
+.purple {background:purple; color:white;}
+.olive {background:olive; color:white;}
+.navy {background:navy; color:white;}
+.orange {background:orange; color:white;}
+.teal {background:teal; color:white;}
+.yellow {background:yellow; color:black;}
+.white {background:white; color:black;}
+.aqua {background:aqua; color:black;}
+.lime {background:lime; color:black;}
+.silver{background:silver; color:black;}
+
+p
+{
+	margin: 0;
+	padding: 0;
 }
 
 .cellL0
@@ -531,144 +683,4 @@ p
   color: black;
 }
 
-.schemaImage
-{ 
-  background-color: #AAEEFF;
-  font-size: 20px;
-  border-radius: 10px; 
-  box-shadow: 8px 8px 8px #666;
-}
-
-.smartImage
-{ 
-  background-color: #000;
-  font-size: 20px;
-}
-
-.stateInfo
-{ 
-  position: absolute; 
-  top: 50px; 
-  left: 20px; 
-  width: 370px; 
-  background-color: #AAEEFF;
-  padding: 10px; 
-  font-size: 20px;
-  border-radius: 10px; 
-  box-shadow: 8px 8px 8px #666;
-}
-
-.centerImage
-{
-  position: absolute;
-  top: 0; 
-  bottom:0; 
-  left: 0; 
-  right:0;
-  margin: auto;
-}
-
-.stateImgContainer
-{ 
-  position: absolute; 
-  left: 420px;
-  top: 50px; 
-  width: 145px; 
-  height: 195px; 
-  background-color: #AAEEFF;
-  padding: 10px; 
-  border-radius: 10px; 
-  box-shadow: 8px 8px 8px #666;
-}
-
-.P4dInfo
-{ 
-  position: absolute; 
-  top: 50px; 
-  left: 595px; 
-  width: 365px; 
-  height: 195px; 
-  background-color: #AAEEFF;
-  padding: 10px; 
-  font-size: 18px;
-  border-radius: 10px; 
-  box-shadow: 8px 8px 8px #666;
-}
-
-#aStateOk
-{ 
-  color: green;
-  font: bold 24px sans-serif;
-}
-
-#aStateFail
-{ 
-  color: red;
-  text-decoration: blink;
-  font: bold 24px sans-serif;
-}
-
-#aStateHeating
-{ 
-  color: red;
-  font: bold 30px sans-serif;
-}
-
-#aStateOther
-{ 
-  color: blue;
-  font: bold 30px sans-serif;
-}
-
-#aSelect 
-{
-  position: absolute; 
-  top: 195px; 
-  left: 20px; 
-  width: 370px; 
-  background-color: #AAEEFF;
-  solid: #804000; 
-  padding: 10px; 
-  font-size: 16px;
-  border-radius: 10px; 
-  box-shadow: 8px 8px 8px #666;
-}
-
-#aSelectChart 
-{ 
-  position: absolute;
-  top: 50px;
-  left: 30px;
-  width: 500px;
-  background-color: #AAEEFF;
-  padding: 10px;
-  font-size: 16px;
-  border-radius:10px;
-  box-shadow: 8px 8px 8px #666;
-}
-
-.chart
-{ 
-  background-color: #AAEEFF;
-  padding: 8px;
-  width: 910px;
-  border-radius: 10px; 
-  box-shadow: 8px 8px 8px #666;
-}
-
-.red {background:red; color:white;}
-.green {background:green; color:white;}
-.blue {background:blue; color:white;}
-.maroon {background:maroon; color:white;}
-.black {background:black; color:white;}
-.purple {background:purple; color:white;}
-.olive {background:olive; color:white;}
-.navy {background:navy; color:white;}
-.orange {background:orange; color:white;}
-.teal {background:teal; color:white;}
-.yellow {background:yellow; color:black;}
-.white {background:white; color:black;}
-.aqua {background:aqua; color:black;}
-.lime {background:lime; color:black;}
-.silver{background:silver; color:black;}
 

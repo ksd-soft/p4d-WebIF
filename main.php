@@ -68,7 +68,8 @@ printHeader(60);
 
   $time = str_replace($wd_value, $wd_disp, $time);   
 
-  echo "      <div class=\"stateInfo\">\n";
+echo "    <div class=\"InfoContent\">";
+echo "      <div class=\"stateInfo\">\n";
 
   if ($state == 19)
      echo  "        <div id=\"aStateOk\"><center>$status</center></div>\n";
@@ -137,7 +138,6 @@ printHeader(60);
     echo  "        <div id=\"aStateFail\"><center>ACHTUNG:<br/>$heatingType Daemon OFFLINE</center></div>\n";
 
   echo "      </div>\n";
-  echo "      <br/>\n";
 
   // ----------------
   // 
@@ -155,16 +155,18 @@ printHeader(60);
   echo "          <input type=submit value=\"Go\">";
   echo "        </form>\n";
   echo "      </div>\n";
+  echo "    </div>\n";
 
   $from = date_create_from_format('!Y-m-d', $year.'-'.$month.'-'.$day)->getTimestamp();
+  echo "      <br/>\n";
 
-  seperator("Messwerte vom " . $maxPretty, 290, 1, 360);
+  seperator("Messwerte vom " . $maxPretty, 0, 1, 930, 0);
 
   // ------------------
   // table
 
   echo "  <div>\n";
-  echo "  <table class=\"table\" cellspacing=0 rules=rows style=\"position:absolute; top:330px;\">\n";
+  echo "  <table class=\"table\" cellspacing=0 rules=rows style=\"width:" . ($body_width + 0) . "px;\">\n";
   echo "      <tr class=\"tableHead1\">\n";
 
 
@@ -218,7 +220,7 @@ printHeader(60);
      echo "     </tr>\n";
   }
 
-  echo "  </table>\n<br/><br/>\n";
+  echo "  </table>\n<br/>\n";
   echo "  </div>\n";
 
   mysql_close();
